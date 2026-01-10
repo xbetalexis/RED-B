@@ -6,115 +6,149 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta property="og:title" content="RED-B CASINO 🔴">
-<meta property="og:description" content="Pagos 24hs · Ruleta · Premios">
+<meta property="og:description" content="Pagos rápidos · Casino VIP · Ruleta de premios">
 <meta property="og:type" content="website">
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
+/* RESET */
 *{box-sizing:border-box;margin:0;padding:0}
+
+/* BASE */
 body{
-  font-family:'Orbitron',sans-serif;
-  background:radial-gradient(circle at top,#1a0000,#000);
+  font-family:'Inter',sans-serif;
+  background:
+    radial-gradient(circle at top,#2a0000 0%,#070000 60%,#000 100%);
   color:#fff;
 }
 
 /* HEADER */
 header{
+  position:sticky;
+  top:0;
+  z-index:50;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 25px;
-  background:linear-gradient(90deg,#400000,#900000);
-  border-bottom:2px solid #ff0000;
+  padding:14px 22px;
+  background:linear-gradient(90deg,#120000,#3a0000);
+  border-bottom:1px solid rgba(255,0,0,.35);
 }
-header h1{color:#ff0000;text-shadow:0 0 10px #ff0000}
-nav a{color:#fff;margin-left:15px;text-decoration:none;font-size:14px}
+header h1{
+  font-family:'Orbitron',sans-serif;
+  color:#ff3b3b;
+  text-shadow:0 0 8px rgba(255,0,0,.6);
+  font-size:20px;
+}
+nav a{
+  color:#fff;
+  margin-left:16px;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.85;
+}
+nav a:hover{opacity:1}
 
 /* SECTIONS */
-section{padding:40px 20px;text-align:center}
-h2,h3{color:#ff0000;text-shadow:0 0 10px #ff0000;margin-bottom:20px}
-.btn{
-  display:inline-block;
-  padding:14px 30px;
-  margin-top:15px;
-  background:linear-gradient(45deg,#ff0000,#990000);
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  box-shadow:0 0 15px #ff0000;
-  border:none;
-  cursor:pointer;
+section{
+  padding:60px 20px;
+  text-align:center;
+}
+h2,h3{
+  font-family:'Orbitron',sans-serif;
+  color:#ff3b3b;
+  text-shadow:0 0 6px rgba(255,0,0,.6);
+}
+.sep{
+  width:80px;
+  height:3px;
+  background:#ff0000;
+  margin:12px auto 30px;
+  border-radius:3px;
 }
 
-/* AGE */
-#ageModal{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.9);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:999;
-}
-.age-box{
-  background:#140000;
-  border:2px solid #ff0000;
-  padding:30px;
+/* BUTTONS */
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  background:linear-gradient(45deg,#ff0000,#b30000);
+  color:#fff;
+  border:none;
   border-radius:10px;
+  font-weight:700;
+  letter-spacing:1px;
+  cursor:pointer;
+  box-shadow:0 0 18px rgba(255,0,0,.5);
 }
-.age-box button{margin:10px;padding:10px 20px;font-weight:bold}
-.age-yes{background:#ff0000;color:#fff;border:none}
-.age-no{background:#333;color:#fff;border:none}
+.btn:hover{
+  box-shadow:0 0 28px rgba(255,0,0,.8);
+}
+
+/* HERO */
+.hero{
+  padding:80px 20px;
+}
+.hero p{
+  margin-top:12px;
+  opacity:.85;
+}
 
 /* GAMES */
 .games{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:20px;
+  gap:22px;
+  max-width:1100px;
+  margin:auto;
 }
 .game{
-  background:#110000;
-  border:1px solid #550000;
-  border-radius:10px;
+  background:linear-gradient(180deg,#120000,#050000);
+  border:1px solid rgba(255,0,0,.25);
+  border-radius:16px;
   overflow:hidden;
+  box-shadow:0 12px 30px rgba(0,0,0,.7);
+  transition:.25s;
 }
-.game img{width:100%}
+.game:hover{
+  transform:translateY(-6px);
+  box-shadow:0 25px 50px rgba(255,0,0,.3);
+}
+.game img{
+  width:100%;
+  display:block;
+}
 .game button{
   width:100%;
-  padding:10px;
-  background:#ff0000;
+  padding:12px;
+  background:linear-gradient(45deg,#ff0000,#b30000);
   border:none;
   color:#fff;
-  font-weight:bold;
+  font-weight:700;
+  letter-spacing:1px;
 }
 
 /* RULETA */
 .ruleta-box{
-  max-width:300px;
-  margin:20px auto;
-  background:#110000;
-  border:2px solid #ff0000;
+  width:280px;
+  height:280px;
+  margin:30px auto;
   border-radius:50%;
-  padding:20px;
-}
-#ruleta{
-  width:100%;
-  height:240px;
-  border-radius:50%;
-  border:6px solid #ff0000;
+  background:radial-gradient(circle,#1a0000,#000);
+  border:5px solid #ff0000;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:20px;
-  color:#ff0000;
+  box-shadow:0 0 30px rgba(255,0,0,.6);
 }
-
-/* INPUT */
+#ruleta{
+  font-family:'Orbitron',sans-serif;
+  color:#ff3b3b;
+  text-align:center;
+}
 input{
-  padding:10px;
-  border-radius:6px;
+  padding:12px;
+  border-radius:8px;
   border:none;
   width:220px;
   text-align:center;
@@ -124,15 +158,17 @@ input{
 .ranking{
   max-width:360px;
   margin:auto;
-  background:#0d0000;
-  border:1px solid #330000;
+  background:#0b0000;
+  border:1px solid rgba(255,0,0,.25);
+  border-radius:12px;
+  overflow:hidden;
 }
 .ranking li{
   list-style:none;
-  padding:10px;
+  padding:12px 14px;
   display:flex;
   justify-content:space-between;
-  border-bottom:1px solid #330000;
+  border-bottom:1px solid rgba(255,0,0,.15);
 }
 
 /* IFRAME */
@@ -141,37 +177,75 @@ input{
   inset:0;
   background:#000;
   display:none;
-  z-index:1000;
+  z-index:999;
 }
 #iframeModal button{
   position:absolute;
   top:15px;
   right:15px;
-  background:red;
-  color:white;
+  background:#ff0000;
+  color:#fff;
   border:none;
-  padding:10px 15px;
-  font-weight:bold;
-  z-index:1001;
+  padding:10px 14px;
+  font-weight:700;
+  border-radius:6px;
 }
+#iframeModal iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+/* AGE */
+#ageModal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+.age-box{
+  background:#120000;
+  border:2px solid #ff0000;
+  padding:30px;
+  border-radius:14px;
+  text-align:center;
+}
+.age-box button{
+  margin:10px;
+  padding:10px 24px;
+  border:none;
+  font-weight:700;
+  border-radius:8px;
+}
+.age-yes{background:#ff0000;color:#fff}
+.age-no{background:#333;color:#fff}
 
 /* FOOTER */
 footer{
-  background:#000;
+  padding:20px;
   text-align:center;
-  padding:15px;
   font-size:12px;
-  color:#777;
+  opacity:.6;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  nav{display:none}
+  header{justify-content:center}
 }
 </style>
 </head>
 
 <body>
 
-<!-- +18 -->
+<!-- AGE -->
 <div id="ageModal">
   <div class="age-box">
-    <h2>🔞 ¿SOS MAYOR DE 18?</h2>
+    <h3>🔞 ¿SOS MAYOR DE 18?</h3>
+    <div class="sep"></div>
     <button class="age-yes" onclick="acceptAge()">SI</button>
     <button class="age-no" onclick="denyAge()">NO</button>
   </div>
@@ -187,9 +261,10 @@ footer{
   </nav>
 </header>
 
-<section>
+<section class="hero">
   <h2>🎰 BIENVENIDO A RED-B</h2>
-  <p>Pagos rápidos · Atención directa · Premios reales</p>
+  <div class="sep"></div>
+  <p>Pagos rápidos · Atención directa · Casino VIP</p><br>
   <a class="btn" href="https://wa.me/549XXXXXXXXX?text=Hola%20quiero%20jugar%20en%20RED-B">
     JUGAR AHORA
   </a>
@@ -197,17 +272,18 @@ footer{
 
 <section id="juegos">
   <h3>🔥 JUEGOS DESTACADOS</h3>
+  <div class="sep"></div>
   <div class="games">
     <div class="game">
-      <img src="https://via.placeholder.com/300x200?text=SLOT+1">
+      <img src="https://via.placeholder.com/400x250?text=SLOT+1">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
     <div class="game">
-      <img src="https://via.placeholder.com/300x200?text=SLOT+2">
+      <img src="https://via.placeholder.com/400x250?text=SLOT+2">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
     <div class="game">
-      <img src="https://via.placeholder.com/300x200?text=SLOT+3">
+      <img src="https://via.placeholder.com/400x250?text=SLOT+3">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
   </div>
@@ -215,20 +291,19 @@ footer{
 
 <section id="ruletaSec">
   <h3>🎡 RULETA DE PREMIOS</h3>
-  <input id="codigo" placeholder="INGRESÁ TU CÓDIGO">
-  <br><br>
+  <div class="sep"></div>
+  <input id="codigo" placeholder="INGRESÁ TU CÓDIGO"><br><br>
   <button class="btn" onclick="verificarCodigo()">VALIDAR</button>
-
   <div class="ruleta-box">
     <div id="ruleta">🎰</div>
   </div>
-
   <button class="btn" onclick="girar()">GIRAR</button>
   <p id="resultado"></p>
 </section>
 
 <section id="rankingSec">
   <h3>🏆 ÚLTIMOS GANADORES</h3>
+  <div class="sep"></div>
   <ul class="ranking">
     <li><span>Lucas</span><span>$45.000</span></li>
     <li><span>María</span><span>$22.000</span></li>
@@ -238,6 +313,7 @@ footer{
 
 <section id="soporte">
   <h3>📲 SOPORTE 24HS</h3>
+  <div class="sep"></div>
   <a class="btn" href="https://wa.me/549XXXXXXXXX">WHATSAPP CAJA</a>
 </section>
 
@@ -245,30 +321,27 @@ footer{
   © 2026 RED-B CASINO · PROHIBIDO MENORES DE 18
 </footer>
 
-<!-- IFRAME MODAL -->
+<!-- IFRAME -->
 <div id="iframeModal">
   <button onclick="cerrarIframe()">✖ CERRAR</button>
-  <iframe id="gameIframe" src="" style="width:100%;height:100%;border:none"></iframe>
+  <iframe id="gameIframe"></iframe>
 </div>
 
 <script>
-/* +18 */
 function acceptAge(){localStorage.setItem("age","1");ageModal.style.display="none"}
 function denyAge(){location.href="https://google.com"}
 if(!localStorage.getItem("age")) ageModal.style.display="flex"
 
-/* IFRAME */
 function abrirJuego(url){
-  document.getElementById("gameIframe").src = url;
-  document.getElementById("iframeModal").style.display = "block";
+  iframeModal.style.display="block";
+  gameIframe.src=url;
 }
 function cerrarIframe(){
-  document.getElementById("gameIframe").src = "";
-  document.getElementById("iframeModal").style.display = "none";
+  iframeModal.style.display="none";
+  gameIframe.src="";
 }
 
-/* CODIGOS */
-const codigos = {
+const codigos={
   "RED100":"100 FICHAS",
   "RED500":"500 FICHAS",
   "REDNOPREMIO":"SIN PREMIO"
@@ -281,14 +354,13 @@ function verificarCodigo(){
   if(usados.includes(c)) return alert("Código ya usado");
   if(!codigos[c]) return alert("Código inválido");
   codigoOK=true;
-  alert("Código válido. Girá la ruleta 🎡");
+  alert("Código válido, girá la ruleta");
 }
 function girar(){
-  if(!codigoOK) return alert("Validá un código primero");
+  if(!codigoOK) return alert("Validá un código");
   const c=codigo.value.trim().toUpperCase();
-  const premio=codigos[c];
-  ruleta.innerText=premio;
-  resultado.innerText="Resultado: "+premio;
+  ruleta.innerText=codigos[c];
+  resultado.innerText="Resultado: "+codigos[c];
   const usados=JSON.parse(localStorage.getItem("usados")||"[]");
   usados.push(c);
   localStorage.setItem("usados",JSON.stringify(usados));
