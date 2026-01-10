@@ -17,8 +17,7 @@
 /* BASE */
 body{
   font-family:'Inter',sans-serif;
-  background:
-    radial-gradient(circle at top,#2a0000 0%,#120000 40%,#000 100%);
+  background:radial-gradient(circle at top,#3a0000 0%,#120000 45%,#000 100%);
   color:#fff;
 }
 
@@ -31,14 +30,14 @@ header{
   justify-content:space-between;
   align-items:center;
   padding:14px 30px;
-  background:linear-gradient(90deg,#1a0000,#400000);
-  border-bottom:2px solid rgba(255,0,0,.4);
+  background:linear-gradient(90deg,#1a0000,#520000);
+  border-bottom:2px solid rgba(255,180,80,.5);
 }
 .logo{
   font-family:'Orbitron',sans-serif;
   font-size:22px;
   color:#ffcc66;
-  text-shadow:0 0 10px rgba(255,204,102,.6);
+  text-shadow:0 0 12px rgba(255,204,102,.8);
 }
 nav a{
   color:#fff;
@@ -51,8 +50,8 @@ nav a{
 /* HERO */
 .hero{
   background:
-    linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.9)),
-    url('https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1600&q=80');
+    linear-gradient(to bottom,rgba(0,0,0,.65),rgba(0,0,0,.9)),
+    url("https://images.unsplash.com/photo-1606166325683-2d0c3d02a0b3?auto=format&fit=crop&w=1600&q=80");
   background-size:cover;
   background-position:center;
   padding:90px 20px;
@@ -62,32 +61,34 @@ nav a{
   font-family:'Orbitron',sans-serif;
   font-size:38px;
   color:#ffcc66;
-  text-shadow:0 0 15px rgba(255,204,102,.7);
+  text-shadow:0 0 18px rgba(255,204,102,.9);
 }
 .hero p{
-  margin:15px 0;
+  margin:16px 0;
   font-size:18px;
-  opacity:.9;
+  opacity:.95;
 }
+
+/* BUTTON */
 .btn{
   display:inline-block;
-  padding:16px 36px;
+  padding:16px 38px;
   background:linear-gradient(45deg,#ff0000,#b30000);
   color:#fff;
   border:none;
-  border-radius:10px;
+  border-radius:12px;
   font-weight:700;
   letter-spacing:1px;
   cursor:pointer;
-  box-shadow:0 0 25px rgba(255,0,0,.7);
+  box-shadow:0 0 28px rgba(255,0,0,.8);
 }
 
-/* SECTION */
+/* SECTIONS */
 section{padding:70px 20px;text-align:center}
 h2{
   font-family:'Orbitron',sans-serif;
   color:#ffcc66;
-  text-shadow:0 0 8px rgba(255,204,102,.6);
+  text-shadow:0 0 10px rgba(255,204,102,.8);
 }
 .sep{
   width:90px;
@@ -100,22 +101,22 @@ h2{
 /* GAMES */
 .games{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:25px;
-  max-width:1100px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+  max-width:1200px;
   margin:auto;
 }
 .game{
-  background:linear-gradient(180deg,#140000,#050000);
-  border:1px solid rgba(255,0,0,.3);
+  background:linear-gradient(180deg,#160000,#050000);
+  border:1px solid rgba(255,180,80,.35);
   border-radius:18px;
   overflow:hidden;
-  box-shadow:0 15px 35px rgba(0,0,0,.8);
+  box-shadow:0 18px 40px rgba(0,0,0,.85);
   transition:.25s;
 }
 .game:hover{
   transform:translateY(-6px);
-  box-shadow:0 25px 55px rgba(255,0,0,.4);
+  box-shadow:0 28px 60px rgba(255,0,0,.45);
 }
 .game img{width:100%;display:block}
 .game button{
@@ -130,16 +131,16 @@ h2{
 
 /* RULETA */
 .ruleta-box{
-  width:280px;
-  height:280px;
+  width:300px;
+  height:300px;
   margin:30px auto;
   border-radius:50%;
-  background:radial-gradient(circle,#1a0000,#000);
+  background:radial-gradient(circle,#220000,#000);
   border:6px solid #ff0000;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 0 35px rgba(255,0,0,.6);
+  box-shadow:0 0 40px rgba(255,0,0,.7);
 }
 #ruleta{
   font-family:'Orbitron',sans-serif;
@@ -147,20 +148,29 @@ h2{
   color:#ffcc66;
 }
 
+/* INPUT */
+input{
+  padding:14px;
+  border-radius:10px;
+  border:none;
+  width:240px;
+  text-align:center;
+}
+
 /* RANKING */
 .ranking{
-  max-width:380px;
+  max-width:400px;
   margin:auto;
-  background:#0b0000;
-  border:1px solid rgba(255,0,0,.25);
-  border-radius:14px;
+  background:#0c0000;
+  border:1px solid rgba(255,180,80,.3);
+  border-radius:16px;
 }
 .ranking li{
   list-style:none;
   padding:14px;
   display:flex;
   justify-content:space-between;
-  border-bottom:1px solid rgba(255,0,0,.15);
+  border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 /* IFRAME */
@@ -180,7 +190,7 @@ h2{
   border:none;
   padding:10px 14px;
   font-weight:700;
-  border-radius:6px;
+  border-radius:8px;
 }
 
 /* AGE */
@@ -194,27 +204,28 @@ h2{
   z-index:1000;
 }
 .age-box{
-  background:#140000;
+  background:#160000;
   border:2px solid #ff0000;
-  padding:30px;
-  border-radius:16px;
+  padding:34px;
+  border-radius:18px;
+  text-align:center;
 }
 .age-box button{
   margin:10px;
-  padding:12px 26px;
+  padding:12px 30px;
   border:none;
   font-weight:700;
-  border-radius:8px;
+  border-radius:10px;
 }
 .age-yes{background:#ff0000;color:#fff}
 .age-no{background:#333;color:#fff}
 
 /* FOOTER */
 footer{
-  padding:25px;
+  padding:24px;
   text-align:center;
   font-size:12px;
-  opacity:.6;
+  opacity:.65;
 }
 
 @media(max-width:600px){
@@ -240,8 +251,8 @@ footer{
   <div class="logo">🔴 RED-B CASINO</div>
   <nav>
     <a href="#juegos">Casino</a>
-    <a href="#ruleta">Ruleta</a>
-    <a href="#ranking">Ranking</a>
+    <a href="#ruletaSec">Ruleta</a>
+    <a href="#rankingSec">Ranking</a>
     <a href="#soporte">Soporte</a>
   </nav>
 </header>
@@ -257,21 +268,21 @@ footer{
   <div class="sep"></div>
   <div class="games">
     <div class="game">
-      <img src="https://i.imgur.com/5Y2YvN9.jpg">
+      <img src="https://i.imgur.com/5Y2YvN9.jpg" alt="Sweet Bonanza">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
     <div class="game">
-      <img src="https://i.imgur.com/3E4Z3aC.jpg">
+      <img src="https://i.imgur.com/3E4Z3aC.jpg" alt="Gates of Olympus">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
     <div class="game">
-      <img src="https://i.imgur.com/0bX5R9U.jpg">
+      <img src="https://i.imgur.com/0bX5R9U.jpg" alt="Big Bass Bonanza">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
   </div>
 </section>
 
-<section id="ruleta">
+<section id="ruletaSec">
   <h2>🎡 RULETA DE PREMIOS</h2>
   <div class="sep"></div>
   <input id="codigo" placeholder="INGRESÁ TU CÓDIGO"><br><br>
@@ -281,7 +292,7 @@ footer{
   <p id="resultado"></p>
 </section>
 
-<section id="ranking">
+<section id="rankingSec">
   <h2>🏆 ÚLTIMOS GANADORES</h2>
   <div class="sep"></div>
   <ul class="ranking">
@@ -311,25 +322,38 @@ function acceptAge(){localStorage.setItem("age","1");ageModal.style.display="non
 function denyAge(){location.href="https://google.com"}
 if(!localStorage.getItem("age")) ageModal.style.display="flex"
 
-function abrirJuego(url){iframeModal.style.display="block";gameIframe.src=url}
-function cerrarIframe(){iframeModal.style.display="none";gameIframe.src=""}
+function abrirJuego(url){
+  iframeModal.style.display="block";
+  gameIframe.src=url;
+}
+function cerrarIframe(){
+  iframeModal.style.display="none";
+  gameIframe.src="";
+}
 
-const codigos={"RED100":"100 FICHAS","RED500":"500 FICHAS","REDNOPREMIO":"SIN PREMIO"};
+const codigos={
+  "RED100":"100 FICHAS",
+  "RED500":"500 FICHAS",
+  "REDNOPREMIO":"SIN PREMIO"
+};
 let ok=false;
+
 function verificarCodigo(){
   const c=codigo.value.trim().toUpperCase();
-  const u=JSON.parse(localStorage.getItem("usados")||"[]");
-  if(u.includes(c)) return alert("Código ya usado");
+  const usados=JSON.parse(localStorage.getItem("usados")||"[]");
+  if(usados.includes(c)) return alert("Código ya usado");
   if(!codigos[c]) return alert("Código inválido");
-  ok=true;alert("Código válido");
+  ok=true;
+  alert("Código válido, girá la ruleta");
 }
 function girar(){
   if(!ok) return alert("Validá un código");
   const c=codigo.value.trim().toUpperCase();
   ruleta.innerText=codigos[c];
   resultado.innerText="Resultado: "+codigos[c];
-  const u=JSON.parse(localStorage.getItem("usados")||"[]");
-  u.push(c);localStorage.setItem("usados",JSON.stringify(u));
+  const usados=JSON.parse(localStorage.getItem("usados")||"[]");
+  usados.push(c);
+  localStorage.setItem("usados",JSON.stringify(usados));
   ok=false;
 }
 </script>
