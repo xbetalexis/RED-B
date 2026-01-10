@@ -5,163 +5,100 @@
 <title>RED-B CASINO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- PREVIEW -->
 <meta property="og:title" content="RED-B CASINO 🔴">
-<meta property="og:description" content="Pagos 24hs · Atención personalizada · Juegos reales">
+<meta property="og:description" content="Pagos 24hs · Ruleta · Premios">
 <meta property="og:type" content="website">
 
-<!-- FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at top, #1a0000, #000);
-  color: #fff;
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Orbitron',sans-serif;
+  background:radial-gradient(circle at top,#1a0000,#000);
+  color:#fff;
+}
+header{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:15px 25px;
+  background:linear-gradient(90deg,#400000,#900000);
+  border-bottom:2px solid #ff0000;
+}
+header h1{color:#ff0000;text-shadow:0 0 10px #ff0000}
+nav a{color:#fff;margin-left:15px;text-decoration:none;font-size:14px}
+
+section{padding:40px 20px;text-align:center}
+h2,h3{color:#ff0000;text-shadow:0 0 10px #ff0000;margin-bottom:20px}
+
+.btn{
+  display:inline-block;padding:14px 30px;margin-top:15px;
+  background:linear-gradient(45deg,#ff0000,#990000);
+  color:#fff;text-decoration:none;
+  border-radius:8px;font-weight:bold;
+  box-shadow:0 0 15px #ff0000;
 }
 
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 25px;
-  background: linear-gradient(90deg, #400000, #800000);
-  border-bottom: 2px solid #ff0000;
+/* AGE */
+#ageModal{
+  position:fixed;inset:0;background:rgba(0,0,0,.9);
+  display:none;align-items:center;justify-content:center;z-index:999
 }
-header h1 {
-  color: #ff0000;
-  font-size: 22px;
-  text-shadow: 0 0 10px #ff0000;
+.age-box{
+  background:#140000;border:2px solid #ff0000;
+  padding:30px;border-radius:10px
 }
-nav a {
-  color: #fff;
-  margin-left: 15px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 60px 20px;
-}
-.hero h2 {
-  font-size: 36px;
-  color: #ff0000;
-  text-shadow: 0 0 15px #ff0000;
-}
-.hero p {
-  margin: 15px 0;
-  color: #ccc;
-}
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 15px 30px;
-  background: linear-gradient(45deg, #ff0000, #990000);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 0 15px #ff0000;
-}
+.age-box button{margin:10px;padding:10px 20px;border:none;font-weight:bold}
+.age-yes{background:#ff0000;color:#fff}
+.age-no{background:#333;color:#fff}
 
 /* GAMES */
-section {
-  padding: 40px 20px;
+.games{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px
 }
-section h3 {
-  text-align: center;
-  color: #ff0000;
-  margin-bottom: 30px;
+.game{
+  background:#110000;border:1px solid #550000;border-radius:10px;
+  overflow:hidden
 }
-.games {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
-}
-.game {
-  background: #110000;
-  border: 1px solid #550000;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-}
-.game img {
-  width: 100%;
-}
-.game button {
-  width: 100%;
-  padding: 10px;
-  background: #ff0000;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
+.game img{width:100%}
+.game button{
+  width:100%;padding:10px;background:#ff0000;border:none;
+  color:#fff;font-weight:bold
 }
 
-/* WINNERS */
-.winners {
-  background: #0d0000;
+/* RULETA */
+.ruleta-box{
+  max-width:320px;margin:0 auto;background:#110000;
+  border:2px solid #ff0000;border-radius:50%;padding:20px
 }
-.winners ul {
-  list-style: none;
-  max-width: 400px;
-  margin: auto;
+#ruleta{
+  width:100%;height:260px;border-radius:50%;
+  border:6px solid #ff0000;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;color:#ff0000;text-shadow:0 0 10px #ff0000;
 }
-.winners li {
-  padding: 10px;
-  border-bottom: 1px solid #330000;
-  display: flex;
-  justify-content: space-between;
+
+/* CODIGO */
+input{
+  padding:10px;border-radius:6px;border:none;
+  width:220px;text-align:center
+}
+
+/* RANKING */
+.ranking{
+  max-width:360px;margin:auto;
+  background:#0d0000;border:1px solid #330000
+}
+.ranking li{
+  list-style:none;padding:10px;
+  display:flex;justify-content:space-between;
+  border-bottom:1px solid #330000
 }
 
 /* FOOTER */
-footer {
-  background: #000;
-  text-align: center;
-  padding: 15px;
-  font-size: 12px;
-  color: #777;
-}
-
-/* AGE MODAL */
-#ageModal {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.9);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
-.age-box {
-  background: #140000;
-  border: 2px solid #ff0000;
-  padding: 30px;
-  text-align: center;
-  border-radius: 10px;
-}
-.age-box h2 {
-  color: #ff0000;
-  margin-bottom: 20px;
-}
-.age-box button {
-  margin: 10px;
-  padding: 10px 20px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-}
-.age-yes {
-  background: #ff0000;
-  color: #fff;
-}
-.age-no {
-  background: #333;
-  color: #fff;
+footer{
+  background:#000;text-align:center;
+  padding:15px;font-size:12px;color:#777
 }
 </style>
 </head>
@@ -171,7 +108,7 @@ footer {
 <!-- +18 -->
 <div id="ageModal">
   <div class="age-box">
-    <h2>🔞 ¿SOS MAYOR DE 18 AÑOS?</h2>
+    <h2>🔞 ¿SOS MAYOR DE 18?</h2>
     <button class="age-yes" onclick="acceptAge()">SI</button>
     <button class="age-no" onclick="denyAge()">NO</button>
   </div>
@@ -181,14 +118,15 @@ footer {
   <h1>RED-B CASINO</h1>
   <nav>
     <a href="#juegos">Casino</a>
-    <a href="#ganadores">Ganadores</a>
+    <a href="#ruletaSec">Ruleta</a>
+    <a href="#rankingSec">Ranking</a>
     <a href="#soporte">Soporte</a>
   </nav>
 </header>
 
-<section class="hero">
+<section>
   <h2>🎰 BIENVENIDO A RED-B</h2>
-  <p>Pagos rápidos · Atención directa · Juegos reales</p>
+  <p>Pagos rápidos · Atención directa · Premios reales</p>
   <a class="btn" href="https://wa.me/549XXXXXXXXX?text=Hola%20quiero%20jugar%20en%20RED-B">
     JUGAR AHORA
   </a>
@@ -197,35 +135,37 @@ footer {
 <section id="juegos">
   <h3>🔥 JUEGOS DESTACADOS</h3>
   <div class="games">
-    <div class="game">
-      <img src="https://via.placeholder.com/300x200?text=SLOT+1">
-      <button onclick="play()">JUGAR</button>
-    </div>
-    <div class="game">
-      <img src="https://via.placeholder.com/300x200?text=SLOT+2">
-      <button onclick="play()">JUGAR</button>
-    </div>
-    <div class="game">
-      <img src="https://via.placeholder.com/300x200?text=SLOT+3">
-      <button onclick="play()">JUGAR</button>
-    </div>
+    <div class="game"><img src="https://via.placeholder.com/300x200?text=SLOT+1"><button onclick="play()">JUGAR</button></div>
+    <div class="game"><img src="https://via.placeholder.com/300x200?text=SLOT+2"><button onclick="play()">JUGAR</button></div>
+    <div class="game"><img src="https://via.placeholder.com/300x200?text=SLOT+3"><button onclick="play()">JUGAR</button></div>
   </div>
 </section>
 
-<section id="ganadores" class="winners">
+<section id="ruletaSec">
+  <h3>🎡 RULETA DE PREMIOS</h3>
+  <input id="codigo" placeholder="INGRESÁ TU CÓDIGO">
+  <br>
+  <button class="btn" onclick="verificarCodigo()">VALIDAR</button>
+  <br><br>
+  <div class="ruleta-box">
+    <div id="ruleta">🎰</div>
+  </div>
+  <button class="btn" onclick="girar()">GIRAR</button>
+  <p id="resultado"></p>
+</section>
+
+<section id="rankingSec">
   <h3>🏆 ÚLTIMOS GANADORES</h3>
-  <ul>
-    <li><span>Lucas</span><span>$48.000</span></li>
-    <li><span>María</span><span>$22.500</span></li>
-    <li><span>Julián</span><span>$31.000</span></li>
+  <ul class="ranking" id="ranking">
+    <li><span>Lucas</span><span>$45.000</span></li>
+    <li><span>María</span><span>$22.000</span></li>
+    <li><span>Julián</span><span>$31.500</span></li>
   </ul>
 </section>
 
-<section id="soporte" style="text-align:center;">
+<section id="soporte">
   <h3>📲 SOPORTE 24HS</h3>
-  <a class="btn" href="https://wa.me/549XXXXXXXXX">
-    WHATSAPP CAJA
-  </a>
+  <a class="btn" href="https://wa.me/549XXXXXXXXX">WHATSAPP CAJA</a>
 </section>
 
 <footer>
@@ -233,18 +173,41 @@ footer {
 </footer>
 
 <script>
-function acceptAge(){
-  localStorage.setItem("age_ok","1");
-  document.getElementById("ageModal").style.display="none";
+// +18
+function acceptAge(){localStorage.setItem("age","1");ageModal.style.display="none"}
+function denyAge(){location.href="https://google.com"}
+if(!localStorage.getItem("age")) ageModal.style.display="flex"
+
+// juegos
+function play(){alert("Contactá a tu cajero por WhatsApp 🔴")}
+
+// CODIGOS
+const codigos = {
+  "RED100":"100 FICHAS",
+  "RED500":"500 FICHAS",
+  "REDNOPREMIO":"SIN PREMIO"
 }
-function denyAge(){
-  window.location.href="https://google.com";
+let codigoOK = false
+
+function verificarCodigo(){
+  const c = codigo.value.trim().toUpperCase()
+  const usados = JSON.parse(localStorage.getItem("usados")||"[]")
+  if(usados.includes(c)) return alert("Código ya usado")
+  if(!codigos[c]) return alert("Código inválido")
+  codigoOK = true
+  alert("Código válido. Girá la ruleta 🎡")
 }
-if(!localStorage.getItem("age_ok")){
-  document.getElementById("ageModal").style.display="flex";
-}
-function play(){
-  alert("Contactá a tu cajero por WhatsApp 🔴🎰");
+
+function girar(){
+  if(!codigoOK) return alert("Ingresá un código válido")
+  const c = codigo.value.trim().toUpperCase()
+  const premio = codigos[c]
+  document.getElementById("ruleta").innerText = premio
+  document.getElementById("resultado").innerText = "Resultado: "+premio
+  const usados = JSON.parse(localStorage.getItem("usados")||"[]")
+  usados.push(c)
+  localStorage.setItem("usados",JSON.stringify(usados))
+  codigoOK = false
 }
 </script>
 
