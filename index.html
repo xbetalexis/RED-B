@@ -18,8 +18,12 @@ body{
   background:radial-gradient(circle at top,#1a0000,#000);
   color:#fff;
 }
+
+/* HEADER */
 header{
-  display:flex;justify-content:space-between;align-items:center;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
   padding:15px 25px;
   background:linear-gradient(90deg,#400000,#900000);
   border-bottom:2px solid #ff0000;
@@ -27,78 +31,137 @@ header{
 header h1{color:#ff0000;text-shadow:0 0 10px #ff0000}
 nav a{color:#fff;margin-left:15px;text-decoration:none;font-size:14px}
 
+/* SECTIONS */
 section{padding:40px 20px;text-align:center}
 h2,h3{color:#ff0000;text-shadow:0 0 10px #ff0000;margin-bottom:20px}
-
 .btn{
-  display:inline-block;padding:14px 30px;margin-top:15px;
+  display:inline-block;
+  padding:14px 30px;
+  margin-top:15px;
   background:linear-gradient(45deg,#ff0000,#990000);
-  color:#fff;text-decoration:none;
-  border-radius:8px;font-weight:bold;
+  color:#fff;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
   box-shadow:0 0 15px #ff0000;
+  border:none;
+  cursor:pointer;
 }
 
 /* AGE */
 #ageModal{
-  position:fixed;inset:0;background:rgba(0,0,0,.9);
-  display:none;align-items:center;justify-content:center;z-index:999
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.9);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:999;
 }
 .age-box{
-  background:#140000;border:2px solid #ff0000;
-  padding:30px;border-radius:10px
+  background:#140000;
+  border:2px solid #ff0000;
+  padding:30px;
+  border-radius:10px;
 }
-.age-box button{margin:10px;padding:10px 20px;border:none;font-weight:bold}
-.age-yes{background:#ff0000;color:#fff}
-.age-no{background:#333;color:#fff}
+.age-box button{margin:10px;padding:10px 20px;font-weight:bold}
+.age-yes{background:#ff0000;color:#fff;border:none}
+.age-no{background:#333;color:#fff;border:none}
 
 /* GAMES */
 .games{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:20px
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:20px;
 }
 .game{
-  background:#110000;border:1px solid #550000;border-radius:10px;
-  overflow:hidden
+  background:#110000;
+  border:1px solid #550000;
+  border-radius:10px;
+  overflow:hidden;
 }
 .game img{width:100%}
 .game button{
-  width:100%;padding:10px;background:#ff0000;border:none;
-  color:#fff;font-weight:bold
+  width:100%;
+  padding:10px;
+  background:#ff0000;
+  border:none;
+  color:#fff;
+  font-weight:bold;
 }
 
 /* RULETA */
 .ruleta-box{
-  max-width:320px;margin:0 auto;background:#110000;
-  border:2px solid #ff0000;border-radius:50%;padding:20px
+  max-width:300px;
+  margin:20px auto;
+  background:#110000;
+  border:2px solid #ff0000;
+  border-radius:50%;
+  padding:20px;
 }
 #ruleta{
-  width:100%;height:260px;border-radius:50%;
+  width:100%;
+  height:240px;
+  border-radius:50%;
   border:6px solid #ff0000;
-  display:flex;align-items:center;justify-content:center;
-  font-size:22px;color:#ff0000;text-shadow:0 0 10px #ff0000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  color:#ff0000;
 }
 
-/* CODIGO */
+/* INPUT */
 input{
-  padding:10px;border-radius:6px;border:none;
-  width:220px;text-align:center
+  padding:10px;
+  border-radius:6px;
+  border:none;
+  width:220px;
+  text-align:center;
 }
 
 /* RANKING */
 .ranking{
-  max-width:360px;margin:auto;
-  background:#0d0000;border:1px solid #330000
+  max-width:360px;
+  margin:auto;
+  background:#0d0000;
+  border:1px solid #330000;
 }
 .ranking li{
-  list-style:none;padding:10px;
-  display:flex;justify-content:space-between;
-  border-bottom:1px solid #330000
+  list-style:none;
+  padding:10px;
+  display:flex;
+  justify-content:space-between;
+  border-bottom:1px solid #330000;
+}
+
+/* IFRAME */
+#iframeModal{
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:none;
+  z-index:1000;
+}
+#iframeModal button{
+  position:absolute;
+  top:15px;
+  right:15px;
+  background:red;
+  color:white;
+  border:none;
+  padding:10px 15px;
+  font-weight:bold;
+  z-index:1001;
 }
 
 /* FOOTER */
 footer{
-  background:#000;text-align:center;
-  padding:15px;font-size:12px;color:#777
+  background:#000;
+  text-align:center;
+  padding:15px;
+  font-size:12px;
+  color:#777;
 }
 </style>
 </head>
@@ -135,28 +198,38 @@ footer{
 <section id="juegos">
   <h3>🔥 JUEGOS DESTACADOS</h3>
   <div class="games">
-    <div class="game"><img src="https://via.placeholder.com/300x200?text=SLOT+1"><button onclick="play()">JUGAR</button></div>
-    <div class="game"><img src="https://via.placeholder.com/300x200?text=SLOT+2"><button onclick="play()">JUGAR</button></div>
-    <div class="game"><img src="https://via.placeholder.com/300x200?text=SLOT+3"><button onclick="play()">JUGAR</button></div>
+    <div class="game">
+      <img src="https://via.placeholder.com/300x200?text=SLOT+1">
+      <button onclick="abrirJuego('https://example.com')">JUGAR</button>
+    </div>
+    <div class="game">
+      <img src="https://via.placeholder.com/300x200?text=SLOT+2">
+      <button onclick="abrirJuego('https://example.com')">JUGAR</button>
+    </div>
+    <div class="game">
+      <img src="https://via.placeholder.com/300x200?text=SLOT+3">
+      <button onclick="abrirJuego('https://example.com')">JUGAR</button>
+    </div>
   </div>
 </section>
 
 <section id="ruletaSec">
   <h3>🎡 RULETA DE PREMIOS</h3>
   <input id="codigo" placeholder="INGRESÁ TU CÓDIGO">
-  <br>
-  <button class="btn" onclick="verificarCodigo()">VALIDAR</button>
   <br><br>
+  <button class="btn" onclick="verificarCodigo()">VALIDAR</button>
+
   <div class="ruleta-box">
     <div id="ruleta">🎰</div>
   </div>
+
   <button class="btn" onclick="girar()">GIRAR</button>
   <p id="resultado"></p>
 </section>
 
 <section id="rankingSec">
   <h3>🏆 ÚLTIMOS GANADORES</h3>
-  <ul class="ranking" id="ranking">
+  <ul class="ranking">
     <li><span>Lucas</span><span>$45.000</span></li>
     <li><span>María</span><span>$22.000</span></li>
     <li><span>Julián</span><span>$31.500</span></li>
@@ -172,42 +245,54 @@ footer{
   © 2026 RED-B CASINO · PROHIBIDO MENORES DE 18
 </footer>
 
+<!-- IFRAME MODAL -->
+<div id="iframeModal">
+  <button onclick="cerrarIframe()">✖ CERRAR</button>
+  <iframe id="gameIframe" src="" style="width:100%;height:100%;border:none"></iframe>
+</div>
+
 <script>
-// +18
+/* +18 */
 function acceptAge(){localStorage.setItem("age","1");ageModal.style.display="none"}
 function denyAge(){location.href="https://google.com"}
 if(!localStorage.getItem("age")) ageModal.style.display="flex"
 
-// juegos
-function play(){alert("Contactá a tu cajero por WhatsApp 🔴")}
+/* IFRAME */
+function abrirJuego(url){
+  document.getElementById("gameIframe").src = url;
+  document.getElementById("iframeModal").style.display = "block";
+}
+function cerrarIframe(){
+  document.getElementById("gameIframe").src = "";
+  document.getElementById("iframeModal").style.display = "none";
+}
 
-// CODIGOS
+/* CODIGOS */
 const codigos = {
   "RED100":"100 FICHAS",
   "RED500":"500 FICHAS",
   "REDNOPREMIO":"SIN PREMIO"
-}
-let codigoOK = false
+};
+let codigoOK=false;
 
 function verificarCodigo(){
-  const c = codigo.value.trim().toUpperCase()
-  const usados = JSON.parse(localStorage.getItem("usados")||"[]")
-  if(usados.includes(c)) return alert("Código ya usado")
-  if(!codigos[c]) return alert("Código inválido")
-  codigoOK = true
-  alert("Código válido. Girá la ruleta 🎡")
+  const c=codigo.value.trim().toUpperCase();
+  const usados=JSON.parse(localStorage.getItem("usados")||"[]");
+  if(usados.includes(c)) return alert("Código ya usado");
+  if(!codigos[c]) return alert("Código inválido");
+  codigoOK=true;
+  alert("Código válido. Girá la ruleta 🎡");
 }
-
 function girar(){
-  if(!codigoOK) return alert("Ingresá un código válido")
-  const c = codigo.value.trim().toUpperCase()
-  const premio = codigos[c]
-  document.getElementById("ruleta").innerText = premio
-  document.getElementById("resultado").innerText = "Resultado: "+premio
-  const usados = JSON.parse(localStorage.getItem("usados")||"[]")
-  usados.push(c)
-  localStorage.setItem("usados",JSON.stringify(usados))
-  codigoOK = false
+  if(!codigoOK) return alert("Validá un código primero");
+  const c=codigo.value.trim().toUpperCase();
+  const premio=codigos[c];
+  ruleta.innerText=premio;
+  resultado.innerText="Resultado: "+premio;
+  const usados=JSON.parse(localStorage.getItem("usados")||"[]");
+  usados.push(c);
+  localStorage.setItem("usados",JSON.stringify(usados));
+  codigoOK=false;
 }
 </script>
 
