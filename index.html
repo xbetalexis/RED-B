@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>RED-B CASINO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- PREVIEW -->
+<meta property="og:title" content="RED-B CASINO 🔴">
+<meta property="og:description" content="Pagos 24hs · Atención personalizada · Juegos reales">
+<meta property="og:type" content="website">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at top, #1a0000, #000);
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: linear-gradient(90deg, #400000, #800000);
+  border-bottom: 2px solid #ff0000;
+}
+header h1 {
+  color: #ff0000;
+  font-size: 22px;
+  text-shadow: 0 0 10px #ff0000;
+}
+nav a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+}
+.hero h2 {
+  font-size: 36px;
+  color: #ff0000;
+  text-shadow: 0 0 15px #ff0000;
+}
+.hero p {
+  margin: 15px 0;
+  color: #ccc;
+}
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #ff0000, #990000);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 15px #ff0000;
+}
+
+/* GAMES */
+section {
+  padding: 40px 20px;
+}
+section h3 {
+  text-align: center;
+  color: #ff0000;
+  margin-bottom: 30px;
+}
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+.game {
+  background: #110000;
+  border: 1px solid #550000;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+.game img {
+  width: 100%;
+}
+.game button {
+  width: 100%;
+  padding: 10px;
+  background: #ff0000;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* WINNERS */
+.winners {
+  background: #0d0000;
+}
+.winners ul {
+  list-style: none;
+  max-width: 400px;
+  margin: auto;
+}
+.winners li {
+  padding: 10px;
+  border-bottom: 1px solid #330000;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* FOOTER */
+footer {
+  background: #000;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* AGE MODAL */
+#ageModal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+.age-box {
+  background: #140000;
+  border: 2px solid #ff0000;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+}
+.age-box h2 {
+  color: #ff0000;
+  margin-bottom: 20px;
+}
+.age-box button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.age-yes {
+  background: #ff0000;
+  color: #fff;
+}
+.age-no {
+  background: #333;
+  color: #fff;
+}
+</style>
+</head>
+
+<body>
+
+<!-- +18 -->
+<div id="ageModal">
+  <div class="age-box">
+    <h2>🔞 ¿SOS MAYOR DE 18 AÑOS?</h2>
+    <button class="age-yes" onclick="acceptAge()">SI</button>
+    <button class="age-no" onclick="denyAge()">NO</button>
+  </div>
+</div>
+
+<header>
+  <h1>RED-B CASINO</h1>
+  <nav>
+    <a href="#juegos">Casino</a>
+    <a href="#ganadores">Ganadores</a>
+    <a href="#soporte">Soporte</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>🎰 BIENVENIDO A RED-B</h2>
+  <p>Pagos rápidos · Atención directa · Juegos reales</p>
+  <a class="btn" href="https://wa.me/549XXXXXXXXX?text=Hola%20quiero%20jugar%20en%20RED-B">
+    JUGAR AHORA
+  </a>
+</section>
+
+<section id="juegos">
+  <h3>🔥 JUEGOS DESTACADOS</h3>
+  <div class="games">
+    <div class="game">
+      <img src="https://via.placeholder.com/300x200?text=SLOT+1">
+      <button onclick="play()">JUGAR</button>
+    </div>
+    <div class="game">
+      <img src="https://via.placeholder.com/300x200?text=SLOT+2">
+      <button onclick="play()">JUGAR</button>
+    </div>
+    <div class="game">
+      <img src="https://via.placeholder.com/300x200?text=SLOT+3">
+      <button onclick="play()">JUGAR</button>
+    </div>
+  </div>
+</section>
+
+<section id="ganadores" class="winners">
+  <h3>🏆 ÚLTIMOS GANADORES</h3>
+  <ul>
+    <li><span>Lucas</span><span>$48.000</span></li>
+    <li><span>María</span><span>$22.500</span></li>
+    <li><span>Julián</span><span>$31.000</span></li>
+  </ul>
+</section>
+
+<section id="soporte" style="text-align:center;">
+  <h3>📲 SOPORTE 24HS</h3>
+  <a class="btn" href="https://wa.me/549XXXXXXXXX">
+    WHATSAPP CAJA
+  </a>
+</section>
+
+<footer>
+  © 2026 RED-B CASINO · PROHIBIDO MENORES DE 18
+</footer>
+
+<script>
+function acceptAge(){
+  localStorage.setItem("age_ok","1");
+  document.getElementById("ageModal").style.display="none";
+}
+function denyAge(){
+  window.location.href="https://google.com";
+}
+if(!localStorage.getItem("age_ok")){
+  document.getElementById("ageModal").style.display="flex";
+}
+function play(){
+  alert("Contactá a tu cajero por WhatsApp 🔴🎰");
+}
+</script>
+
+</body>
+</html>
