@@ -48,13 +48,13 @@ nav a:hover{opacity:1}
 
 /* HERO */
 .hero{
-  padding:60px 20px;
+  padding:70px 20px;
   text-align:center;
   background:radial-gradient(circle,#1a0000,#000);
 }
 .hero h1{
   font-family:'Orbitron',sans-serif;
-  font-size:28px;
+  font-size:30px;
   color:#ffcc66;
 }
 .hero p{
@@ -103,11 +103,11 @@ h2{
   border-radius:14px;
   overflow:hidden;
   box-shadow:0 10px 25px rgba(0,0,0,.7);
-  transition:.2s;
+  transition:.25s;
 }
 .game:hover{
-  transform:translateY(-4px);
-  box-shadow:0 18px 40px rgba(255,0,0,.3);
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(255,0,0,.45);
 }
 .game img{
   width:100%;
@@ -121,6 +121,7 @@ h2{
   border:none;
   color:#fff;
   font-weight:700;
+  cursor:pointer;
 }
 
 /* RULETA */
@@ -145,6 +146,7 @@ input{
 }
 #ruleta{
   font-family:'Orbitron',sans-serif;
+  font-size:20px;
   color:#ffcc66;
 }
 
@@ -220,15 +222,15 @@ footer{
   <div class="sep"></div>
   <div class="games">
     <div class="game">
-      <img src="/img/sweet-bonanza.jpg" alt="Sweet Bonanza">
+      <img src="public/img/sweet-bonanza.jpg" alt="Sweet Bonanza">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
     <div class="game">
-      <img src="/img/gates-olympus.jpg" alt="Gates of Olympus">
+      <img src="public/img/gates-olympus.jpg" alt="Gates of Olympus">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
     <div class="game">
-      <img src="/img/big-bass.jpg" alt="Big Bass Bonanza">
+      <img src="public/img/big-bass.jpg" alt="Big Bass Bonanza">
       <button onclick="abrirJuego('https://example.com')">JUGAR</button>
     </div>
   </div>
@@ -279,7 +281,11 @@ function cerrarIframe(){
   gameIframe.src="";
 }
 
-const codigos={"RED100":"100 FICHAS","RED500":"500 FICHAS","NOPREMIO":"SIN PREMIO"};
+const codigos={
+  "RED100":"100 FICHAS",
+  "RED500":"500 FICHAS",
+  "NOPREMIO":"SIN PREMIO"
+};
 let ok=false;
 
 function verificarCodigo(){
