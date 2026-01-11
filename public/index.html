@@ -35,7 +35,7 @@ header{
   font-family:'Orbitron',sans-serif;
   font-size:20px;
   color:#ffcc66;
-  text-shadow:0 0 6px rgba(255,200,120,.6);
+  text-shadow:0 0 8px rgba(255,200,120,.7);
 }
 nav a{
   color:#fff;
@@ -48,71 +48,128 @@ nav a:hover{opacity:1}
 
 /* HERO */
 .hero{
-  padding:70px 20px;
+  padding:80px 20px 70px;
   text-align:center;
-  background:radial-gradient(circle,#1a0000,#000);
+  background:
+    radial-gradient(circle at center, rgba(255,0,0,.15), transparent 60%),
+    radial-gradient(circle,#1a0000,#000);
 }
 .hero h1{
   font-family:'Orbitron',sans-serif;
-  font-size:30px;
+  font-size:34px;
   color:#ffcc66;
+  text-shadow:0 0 14px rgba(255,200,120,.6);
 }
 .hero p{
-  margin:12px 0 22px;
-  opacity:.85;
+  margin:12px 0 18px;
+  opacity:.9;
+}
+.badges{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  margin-bottom:22px;
+  flex-wrap:wrap;
+}
+.badge{
+  padding:6px 14px;
+  border-radius:20px;
+  background:#140000;
+  border:1px solid rgba(255,0,0,.3);
+  font-size:12px;
+  opacity:.9;
 }
 
 /* BUTTON */
 .btn{
   display:inline-block;
-  padding:14px 32px;
+  padding:14px 36px;
   background:linear-gradient(45deg,#ff0000,#b30000);
   color:#fff;
   border:none;
-  border-radius:10px;
-  font-weight:700;
+  border-radius:12px;
+  font-weight:800;
   cursor:pointer;
-  box-shadow:0 0 18px rgba(255,0,0,.6);
+  box-shadow:0 0 22px rgba(255,0,0,.65);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 18px rgba(255,0,0,.5)}
+  50%{box-shadow:0 0 34px rgba(255,0,0,.9)}
+  100%{box-shadow:0 0 18px rgba(255,0,0,.5)}
 }
 
 /* SECTION */
-section{padding:50px 20px;text-align:center}
+section{padding:60px 20px;text-align:center}
 h2{
   font-family:'Orbitron',sans-serif;
   color:#ffcc66;
+  letter-spacing:1px;
 }
 .sep{
-  width:70px;
+  width:80px;
   height:3px;
   background:#ff0000;
-  margin:12px auto 28px;
+  margin:14px auto 36px;
   border-radius:3px;
+}
+
+/* WHY */
+.why{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+.why div{
+  background:#0b0000;
+  border:1px solid rgba(255,0,0,.25);
+  border-radius:14px;
+  padding:22px;
+  box-shadow:0 10px 24px rgba(0,0,0,.7);
+}
+.why span{
+  font-size:22px;
+  display:block;
+  margin-bottom:10px;
 }
 
 /* GAMES */
 .games{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+  gap:26px;
   max-width:1000px;
   margin:auto;
 }
 .game{
   background:#0b0000;
   border:1px solid rgba(255,0,0,.25);
-  border-radius:14px;
+  border-radius:16px;
   overflow:hidden;
-  box-shadow:0 10px 25px rgba(0,0,0,.7);
+  box-shadow:0 12px 30px rgba(0,0,0,.75);
   transition:.25s;
 }
 .game:hover{
   transform:translateY(-6px);
-  box-shadow:0 18px 40px rgba(255,0,0,.45);
+  box-shadow:0 22px 44px rgba(255,0,0,.45);
 }
 .game img{
   width:100%;
   height:160px;
   object-fit:cover;
+}
+.game .info{
+  padding:14px;
+}
+.game h3{
+  font-size:15px;
+  margin-bottom:4px;
+}
+.game p{
+  font-size:12px;
+  opacity:.7;
 }
 .game button{
   width:100%;
@@ -120,7 +177,7 @@ h2{
   background:#ff0000;
   border:none;
   color:#fff;
-  font-weight:700;
+  font-weight:800;
   cursor:pointer;
 }
 
@@ -135,18 +192,18 @@ input{
 .ruleta-box{
   width:260px;
   height:260px;
-  margin:24px auto;
+  margin:26px auto;
   border-radius:50%;
   background:radial-gradient(circle,#1a0000,#000);
   border:5px solid #ff0000;
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 0 30px rgba(255,0,0,.6);
+  box-shadow:0 0 36px rgba(255,0,0,.8);
 }
 #ruleta{
   font-family:'Orbitron',sans-serif;
-  font-size:20px;
+  font-size:22px;
   color:#ffcc66;
 }
 
@@ -156,7 +213,7 @@ input{
   margin:auto;
   background:#0b0000;
   border:1px solid rgba(255,0,0,.25);
-  border-radius:12px;
+  border-radius:14px;
 }
 .ranking li{
   list-style:none;
@@ -166,28 +223,9 @@ input{
   border-bottom:1px solid rgba(255,255,255,.08);
 }
 
-/* IFRAME */
-#iframeModal{
-  position:fixed;
-  inset:0;
-  background:#000;
-  display:none;
-  z-index:100;
-}
-#iframeModal button{
-  position:absolute;
-  top:12px;
-  right:12px;
-  background:#ff0000;
-  border:none;
-  color:#fff;
-  padding:10px 14px;
-  border-radius:6px;
-}
-
 /* FOOTER */
 footer{
-  padding:20px;
+  padding:22px;
   text-align:center;
   font-size:12px;
   opacity:.6;
@@ -214,7 +252,23 @@ footer{
 <section class="hero">
   <h1>BIENVENIDO A RED-B</h1>
   <p>Pagos 24hs · Atención directa · Casino VIP</p>
+  <div class="badges">
+    <div class="badge">⚡ Pagos rápidos</div>
+    <div class="badge">🔒 100% seguro</div>
+    <div class="badge">🎯 Casino VIP</div>
+  </div>
   <a class="btn" href="https://wa.me/549XXXXXXXXX">JUGAR AHORA</a>
+</section>
+
+<section>
+  <h2>¿POR QUÉ RED-B?</h2>
+  <div class="sep"></div>
+  <div class="why">
+    <div><span>💰</span>Pagos reales y rápidos</div>
+    <div><span>📲</span>Atención directa por WhatsApp</div>
+    <div><span>🏆</span>Clientes reales todos los días</div>
+    <div><span>🔐</span>Plataforma confiable</div>
+  </div>
 </section>
 
 <section id="juegos">
@@ -222,16 +276,28 @@ footer{
   <div class="sep"></div>
   <div class="games">
     <div class="game">
-      <img src="img/sweet-bonanza.jpg" alt="Sweet Bonanza">
-      <button onclick="abrirJuego('https://example.com')">JUGAR</button>
+      <img src="img/sweet-bonanza.jpg">
+      <div class="info">
+        <h3>Sweet Bonanza</h3>
+        <p>Slot popular · Pagos altos</p>
+      </div>
+      <button>JUGAR</button>
     </div>
     <div class="game">
-      <img src="img/gates-olympus.jpg" alt="Gates of Olympus">
-      <button onclick="abrirJuego('https://example.com')">JUGAR</button>
+      <img src="img/gates-olympus.jpg">
+      <div class="info">
+        <h3>Gates of Olympus</h3>
+        <p>Alta volatilidad</p>
+      </div>
+      <button>JUGAR</button>
     </div>
     <div class="game">
-      <img src="img/big-bass.jpg" alt="Big Bass Bonanza">
-      <button onclick="abrirJuego('https://example.com')">JUGAR</button>
+      <img src="img/big-bass.jpg">
+      <div class="info">
+        <h3>Big Bass Bonanza</h3>
+        <p>Clásico favorito</p>
+      </div>
+      <button>JUGAR</button>
     </div>
   </div>
 </section>
@@ -239,11 +305,10 @@ footer{
 <section id="ruletaSec">
   <h2>🎡 RULETA DE PREMIOS</h2>
   <div class="sep"></div>
-  <input id="codigo" placeholder="INGRESÁ TU CÓDIGO"><br><br>
-  <button class="btn" onclick="verificarCodigo()">VALIDAR</button>
+  <input placeholder="INGRESÁ TU CÓDIGO"><br><br>
+  <button class="btn">VALIDAR</button>
   <div class="ruleta-box"><div id="ruleta">🎰</div></div>
-  <button class="btn" onclick="girar()">GIRAR</button>
-  <p id="resultado"></p>
+  <button class="btn">GIRAR</button>
 </section>
 
 <section id="rankingSec">
@@ -265,48 +330,6 @@ footer{
 <footer>
   © 2026 RED-B CASINO · PROHIBIDO MENORES DE 18
 </footer>
-
-<div id="iframeModal">
-  <button onclick="cerrarIframe()">✖ CERRAR</button>
-  <iframe id="gameIframe" style="width:100%;height:100%;border:none"></iframe>
-</div>
-
-<script>
-function abrirJuego(url){
-  iframeModal.style.display="block";
-  gameIframe.src=url;
-}
-function cerrarIframe(){
-  iframeModal.style.display="none";
-  gameIframe.src="";
-}
-
-const codigos={
-  "RED100":"100 FICHAS",
-  "RED500":"500 FICHAS",
-  "NOPREMIO":"SIN PREMIO"
-};
-let ok=false;
-
-function verificarCodigo(){
-  const c=codigo.value.trim().toUpperCase();
-  const usados=JSON.parse(localStorage.getItem("usados")||"[]");
-  if(usados.includes(c)) return alert("Código ya usado");
-  if(!codigos[c]) return alert("Código inválido");
-  ok=true;
-  alert("Código válido");
-}
-function girar(){
-  if(!ok) return alert("Validá un código");
-  const c=codigo.value.trim().toUpperCase();
-  ruleta.innerText=codigos[c];
-  resultado.innerText="Resultado: "+codigos[c];
-  const usados=JSON.parse(localStorage.getItem("usados")||"[]");
-  usados.push(c);
-  localStorage.setItem("usados",JSON.stringify(usados));
-  ok=false;
-}
-</script>
 
 </body>
 </html>
