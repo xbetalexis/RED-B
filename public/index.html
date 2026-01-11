@@ -8,15 +8,21 @@
 <meta property="og:title" content="RED-B CASINO">
 <meta property="og:description" content="Pagos 24hs · Atención directa · Casino VIP">
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Playfair+Display:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
+/* ===== FONDO CASINO REAL ===== */
 body{
   font-family:'Inter',sans-serif;
-  background:#000;
   color:#fff;
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.9)
+    ),
+    url("img/casino-bg.jpg.png") center/cover fixed no-repeat;
 }
 
 /* HEADER */
@@ -32,11 +38,10 @@ header{
   border-bottom:1px solid rgba(255,0,0,.35);
 }
 .logo{
-  font-family:'Cinzel',serif;
-  font-size:22px;
-  color:#f5d27a;
-  letter-spacing:1px;
-  text-shadow:0 0 10px rgba(255,200,120,.6);
+  font-family:'Orbitron',sans-serif;
+  font-size:20px;
+  color:#ffcc66;
+  text-shadow:0 0 8px rgba(255,200,120,.7);
 }
 nav a{
   color:#fff;
@@ -49,73 +54,99 @@ nav a:hover{opacity:1}
 
 /* HERO */
 .hero{
-  min-height:70vh;
-  padding:80px 20px;
+  padding:80px 20px 70px;
   text-align:center;
   background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
-    url("/img/casino-bg.jpg.png") center/cover no-repeat;
+    radial-gradient(circle at center, rgba(255,0,0,.25), transparent 65%),
+    rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
 }
 .hero h1{
-  font-family:'Cinzel',serif;
-  font-size:42px;
-  letter-spacing:2px;
-  color:#f5d27a;
-  text-transform:uppercase;
-  text-shadow:
-    0 1px 0 #b88a2d,
-    0 2px 0 #a67c29,
-    0 3px 0 #8c661f,
-    0 4px 6px rgba(0,0,0,.9),
-    0 0 20px rgba(255,200,80,.45);
+  font-family:'Orbitron',sans-serif;
+  font-size:34px;
+  color:#ffcc66;
+  text-shadow:0 0 14px rgba(255,200,120,.6);
 }
 .hero p{
-  margin:14px 0 22px;
-  font-family:'Playfair Display',serif;
-  font-size:18px;
+  margin:12px 0 18px;
+  opacity:.9;
+}
+.badges{
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  margin-bottom:22px;
+  flex-wrap:wrap;
+}
+.badge{
+  padding:6px 14px;
+  border-radius:20px;
+  background:#140000;
+  border:1px solid rgba(255,0,0,.3);
+  font-size:12px;
   opacity:.9;
 }
 
-/* BUTTON */
+/* BOTONES */
 .btn{
   display:inline-block;
-  padding:15px 40px;
-  background:linear-gradient(45deg,#b30000,#ff1a1a);
+  padding:14px 36px;
+  background:linear-gradient(45deg,#ff0000,#b30000);
   color:#fff;
   border:none;
-  border-radius:14px;
+  border-radius:12px;
   font-weight:800;
-  letter-spacing:1px;
   cursor:pointer;
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.25),
-    0 10px 30px rgba(255,0,0,.6);
+  box-shadow:0 0 22px rgba(255,0,0,.65);
+  animation:pulse 2s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 18px rgba(255,0,0,.5)}
+  50%{box-shadow:0 0 34px rgba(255,0,0,.9)}
+  100%{box-shadow:0 0 18px rgba(255,0,0,.5)}
 }
 
-/* SECTION */
+/* SECCIONES */
 section{padding:60px 20px;text-align:center}
 h2{
-  font-family:'Cinzel',serif;
-  font-size:28px;
-  letter-spacing:1.5px;
-  color:#f5d27a;
-  text-shadow:
-    0 0 8px rgba(255,200,100,.4),
-    0 2px 6px rgba(0,0,0,.9);
+  font-family:'Orbitron',sans-serif;
+  color:#ffcc66;
+  letter-spacing:1px;
 }
 .sep{
-  width:70px;
+  width:80px;
   height:3px;
   background:#ff0000;
-  margin:14px auto 32px;
+  margin:14px auto 36px;
   border-radius:3px;
 }
 
-/* GAMES */
+/* POR QUÉ */
+.why{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:auto;
+}
+.why div{
+  background:#0b0000;
+  border:1px solid rgba(255,0,0,.25);
+  border-radius:14px;
+  padding:22px;
+  box-shadow:0 10px 24px rgba(0,0,0,.7);
+}
+.why span{
+  font-size:22px;
+  display:block;
+  margin-bottom:10px;
+}
+
+/* JUEGOS */
 .games{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:22px;
+  gap:26px;
   max-width:1000px;
   margin:auto;
 }
@@ -124,21 +155,32 @@ h2{
   border:1px solid rgba(255,0,0,.25);
   border-radius:16px;
   overflow:hidden;
-  box-shadow:0 12px 30px rgba(0,0,0,.8);
-  transition:.3s;
+  box-shadow:0 12px 30px rgba(0,0,0,.75);
+  transition:.25s;
 }
 .game:hover{
   transform:translateY(-6px);
-  box-shadow:0 20px 45px rgba(255,0,0,.45);
+  box-shadow:0 22px 44px rgba(255,0,0,.45);
 }
 .game img{
   width:100%;
-  height:170px;
+  height:160px;
   object-fit:cover;
+}
+.game .info{
+  padding:14px;
+}
+.game h3{
+  font-size:15px;
+  margin-bottom:4px;
+}
+.game p{
+  font-size:12px;
+  opacity:.7;
 }
 .game button{
   width:100%;
-  padding:14px;
+  padding:12px;
   background:#ff0000;
   border:none;
   color:#fff;
@@ -146,35 +188,9 @@ h2{
   cursor:pointer;
 }
 
-/* RULETA */
-input{
-  padding:12px;
-  width:220px;
-  border-radius:8px;
-  border:none;
-  text-align:center;
-}
-.ruleta-box{
-  width:260px;
-  height:260px;
-  margin:24px auto;
-  border-radius:50%;
-  background:radial-gradient(circle,#1a0000,#000);
-  border:5px solid #ff0000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 0 35px rgba(255,0,0,.6);
-}
-#ruleta{
-  font-family:'Cinzel',serif;
-  font-size:20px;
-  color:#f5d27a;
-}
-
 /* FOOTER */
 footer{
-  padding:20px;
+  padding:22px;
   text-align:center;
   font-size:12px;
   opacity:.6;
@@ -189,10 +205,9 @@ footer{
 <body>
 
 <header>
-  <div class="logo">RED-B CASINO</div>
+  <div class="logo">🔴 RED-B CASINO</div>
   <nav>
     <a href="#juegos">Casino</a>
-    <a href="#ruletaSec">Ruleta</a>
     <a href="#soporte">Soporte</a>
   </nav>
 </header>
@@ -200,7 +215,26 @@ footer{
 <section class="hero">
   <h1>BIENVENIDO A RED-B</h1>
   <p>Pagos 24hs · Atención directa · Casino VIP</p>
-  <a class="btn" href="https://wa.me/5491155632400" target="_blank">JUGAR AHORA</a>
+  <div class="badges">
+    <div class="badge">⚡ Pagos rápidos</div>
+    <div class="badge">🔒 100% seguro</div>
+    <div class="badge">🎯 Casino VIP</div>
+  </div>
+  <a class="btn"
+     href="https://wa.me/5491155632400?text=Hola%2C%20quiero%20jugar%20en%20RED-B%20Casino%20%F0%9F%8E%B0">
+     JUGAR AHORA
+  </a>
+</section>
+
+<section>
+  <h2>¿POR QUÉ RED-B?</h2>
+  <div class="sep"></div>
+  <div class="why">
+    <div><span>💰</span>Pagos reales y rápidos</div>
+    <div><span>📲</span>Atención directa por WhatsApp</div>
+    <div><span>🏆</span>Clientes reales todos los días</div>
+    <div><span>🔐</span>Plataforma confiable</div>
+  </div>
 </section>
 
 <section id="juegos">
@@ -208,33 +242,39 @@ footer{
   <div class="sep"></div>
   <div class="games">
     <div class="game">
-      <img src="/img/sweet-bonanza.jpg">
-      <button>JUGAR</button>
+      <img src="img/sweet-bonanza.jpg">
+      <div class="info">
+        <h3>Sweet Bonanza</h3>
+        <p>Slot popular · Pagos altos</p>
+      </div>
+      <button onclick="window.location.href='https://wa.me/5491155632400'">JUGAR</button>
     </div>
     <div class="game">
-      <img src="/img/gates-olympus.jpg">
-      <button>JUGAR</button>
+      <img src="img/gates-olympus.jpg">
+      <div class="info">
+        <h3>Gates of Olympus</h3>
+        <p>Alta volatilidad</p>
+      </div>
+      <button onclick="window.location.href='https://wa.me/5491155632400'">JUGAR</button>
     </div>
     <div class="game">
-      <img src="/img/big-bass.jpg">
-      <button>JUGAR</button>
+      <img src="img/big-bass.jpg">
+      <div class="info">
+        <h3>Big Bass Bonanza</h3>
+        <p>Clásico favorito</p>
+      </div>
+      <button onclick="window.location.href='https://wa.me/5491155632400'">JUGAR</button>
     </div>
   </div>
-</section>
-
-<section id="ruletaSec">
-  <h2>🎡 RULETA DE PREMIOS</h2>
-  <div class="sep"></div>
-  <input placeholder="INGRESÁ TU CÓDIGO"><br><br>
-  <button class="btn">VALIDAR</button>
-  <div class="ruleta-box"><div id="ruleta">🎰</div></div>
-  <button class="btn">GIRAR</button>
 </section>
 
 <section id="soporte">
   <h2>📲 SOPORTE 24HS</h2>
   <div class="sep"></div>
-  <a class="btn" href="https://wa.me/5491155632400" target="_blank">WHATSAPP CAJA</a>
+  <a class="btn"
+     href="https://wa.me/5491155632400?text=Hola%2C%20necesito%20soporte%20en%20RED-B%20Casino">
+     WHATSAPP CAJA
+  </a>
 </section>
 
 <footer>
